@@ -1,0 +1,145 @@
+/* nav container (Fixed at the top) */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: white;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  /* Left section */
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  /* Ensure the menu icon is always visible */
+  .menu-icon {
+    cursor: pointer;
+    display: block;
+  }
+  
+  /* Logo styles */
+  .logo-small {
+    display: none; /* Hide small logo */
+  }
+  
+  .logo-large {
+    display: block;
+    width: 120px; /* Increase size */
+    height: auto;
+  }
+  
+  /* Center search bar */
+  .nav-middle {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    position: relative;
+  }
+  
+  .search-ip {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 24px;
+    outline: none;
+  }
+  
+  .search-btn {
+    position: absolute;
+    right: 0;
+    width: 60px; /* YouTube-style width */
+    height: 37px; /* Consistent height */
+    background-color: #f8f8f8; /* Light gray background like YouTube */
+    border: 1px solid #ddd; /* Light border */
+    border-left: none; /* Removes border between input and button */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    margin-bottom: 16px;
+
+}
+
+.search-btn:hover {
+    background-color: #e0e0e0; /* Slightly darker gray on hover */
+}
+
+  
+  
+  /* Right section */
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    position: relative;
+  }
+  
+  /* Avatar */
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    margin-right: 35px;
+  }
+  
+  /* Dropdown menu */
+  .dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 48px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    width: 180px;
+    z-index: 10;
+  }
+  
+  .dropdown-item {
+    display: block;
+    padding: 10px 16px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f7f7f7;
+  }
+  
+  .logout {
+    color: red;
+  }
+  
+  .login-button {
+    border: 1px solid #ddd;
+    padding: 6px 16px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    margin-right: 23px;
+    text-decoration: none;
+  }
+  
+  /* Push content down so it's not hidden behind the fixed nav */
+  body {
+    padding-top: 60px;
+  }
+  

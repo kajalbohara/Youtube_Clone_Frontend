@@ -1,0 +1,60 @@
+
+
+.sidebar {
+    position: fixed;
+    top: 65px; /* Moves below the header */
+    left: 0;
+    width: 240px; /* Adjust as per your design */
+    height: calc(100vh - 65px); /* Full height minus header */
+    overflow-y: auto;
+    z-index: 1000; /* Below header */
+    background: white;
+    
+}
+
+
+.collapsed {
+  width: 80px;
+}
+
+.sidebar-menu {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sidebar-menu .icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.sidebar.collapsed{
+  width: min-content;
+}
+
+.collapsed .sidebar-menu {
+  justify-content: center;
+}
+
+.collapsed .sidebar-menu .icon {
+  margin-right: 0;
+}
+
+.hidden-items {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hidden-items.hide {
+  display: none;
+}
+.divider {
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+.sidebar-menu:hover {
+  background: #f0f0f0;
+}
