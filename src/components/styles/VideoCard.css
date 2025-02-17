@@ -1,0 +1,70 @@
+.video-main {
+    width: 22rem; /* Slightly reduce width to prevent merging */
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; /* Prevents shrinking */
+  }
+  
+  
+  .thumbnail {
+    width: 100%;
+    height: 12rem; /* Adjust height as per your design */
+    border: 1px solid black;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+  }
+  
+  .video-information {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+  }
+  
+  .logo {
+    width: 3rem; 
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid black;
+    object-fit: cover;
+    background-size: contain;  /* Ensures the entire image is visible */
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .Details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .vid-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #222;
+    margin:0px;
+  }
+  
+  
+  
+  .channel-titles {
+    font-size: 18px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      color: black;
+      text-decoration: none;
+  }
+  
+  .channel-title:hover {
+    text-decoration: underline;
+  }
+  
+  .videos-info {
+    font-size: 12px;
+    color: gray;
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  
