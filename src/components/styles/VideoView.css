@@ -1,0 +1,295 @@
+/* ===== Root Container ===== */
+.video-view-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Ensures space is properly used */
+  gap: 1rem; /* Adds some spacing */
+  flex-wrap: wrap; /* Prevents overflow */
+}
+
+/* ===== Left Section (Video & Comments) ===== */
+.video-left {
+  flex: 1; /* Takes remaining space */
+  min-width: 40rem; /* Prevents excessive shrinking */
+  max-width: 65%; /* Limits max width */
+  padding: 1rem;
+}
+
+/* ===== Video Iframe ===== */  
+.video-iframe {
+  width: 100%;
+  height: 28rem;
+  border: none;
+}
+
+/* ===== Operations (Channel Info & Action Buttons) ===== */
+.vid-name {
+  margin-bottom: 0px;
+}
+
+.operations {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+/* Left group (Channel logo, name, subscribe button) */
+.left-group {
+  display: flex;
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  align-items: center;
+}
+
+/* Channel link */
+.channel-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Channel image */
+.channel {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+/* Channel name */
+.chnl-nm {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Subscribe button */
+.subscribe-btn {
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: #1e293b;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  transition: background-color 0.2s ease;
+}
+
+.subscribe-btn:hover {
+  background-color: black;
+}
+
+/* Right actions (like, dislike, save) */
+.vid-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  width: 100%;
+  font-size: 16px;
+  justify-content: flex-end;
+}
+
+/* Action buttons */
+.action-btn {
+  padding: 0.25rem 1rem;
+  background-color: #e2e8f0;
+  border: none;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+/* ===== Comments Section ===== */
+.comments-section {
+  padding: 0.5rem;
+  background-color: #f1f5f9;
+}
+
+.comments-header {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.comment-text {
+  font-size: 16px;
+}
+
+/* ===== Add Comment ===== */
+.addComment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 1rem;
+}
+
+.addComment input {
+  outline: none;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid black;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  font-size: 16px;
+}
+
+.addComment button {
+  background-color: white;
+  font-size: 16px;
+  width: 9rem;
+  padding: 0.25rem;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.addComment button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* ===== Comments List ===== */
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+/* ===== Side View (Related Videos) ===== */
+.sideView {
+ /* Takes up 30% of the container */
+  max-width: 25rem; /* Prevents it from getting too large */
+  padding: 1rem;
+  overflow: hidden; /* Prevents overflow issues */
+}
+
+/* Side View Title */
+.sideView-title {
+  font-size: 1.25rem;
+  padding: 1rem 0;
+}
+
+/* ===== Side Videos List (Container) ===== */
+.sideVideosList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 95%; /* Prevents overflow */
+}
+
+/* ===== Each Video Box (Related Video) ===== */
+.boxVideo {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 10px;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1),
+              0 2px 4px -1px rgba(0,0,0,0.06);
+  text-decoration: none;
+  color: inherit;
+  width: 100%; /* Ensures it doesn’t overflow */
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Video Thumbnail */
+.box-video-img {
+  width: 40%; /* Adjusts width relative to container */
+  max-width: 10rem;
+  height: 80px;
+  border-radius: 0.375rem;
+  object-fit: cover;
+}
+
+/* Details inside the box */
+.details {
+  flex: 1;
+  overflow: hidden;
+}
+
+.details h2 {
+  font-size: 14px;
+  margin: 0.2rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Truncates long titles */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .video-left {
+    min-width: 30rem;
+  }
+
+  .video-iframe {
+    height: 20rem;
+  }
+
+  .chnl-nm {
+    font-size: 18px;
+  }
+
+  .subscribe-btn {
+    padding: 8px 12px;
+  }
+
+  .vid-actions {
+    font-size: 14px;
+  }
+
+  .action-btn {
+    padding: 0.25rem 0.75rem;
+  }
+
+  .sideView {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .box-video-img {
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-left {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .video-iframe {
+    height: 15rem;
+  }
+
+  .chnl-nm {
+    font-size: 16px;
+  }
+
+  .subscribe-btn {
+    padding: 6px 10px;
+  }
+
+  .vid-actions {
+    font-size: 12px;
+  }
+
+  .action-btn {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .sideView {
+    display: none; /* Hide side view on small screens */
+  }
+}
+
+

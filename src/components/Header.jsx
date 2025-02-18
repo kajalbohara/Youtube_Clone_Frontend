@@ -12,7 +12,7 @@ import { setUserChannelDetails } from "./utils/userChannelSlice";
 import axios from "axios";
 import "./styles/Header.css";
 import { toggleContext } from "../App";
-import { useContext } from "react";
+import React ,{ useContext } from "react";
 
 export default function ( ) {
     const { sideBarToggle ,setSideBarToggle} = useContext(toggleContext);  // Get isCollapse from Context
@@ -60,7 +60,7 @@ export default function ( ) {
   };
 
   return (
-    <div className="nav">
+    <div className="navbar">
       <div className="nav-left">
         <IoMdMenu className="menu-icon" size={24}   onClick={() => setSideBarToggle(!sideBarToggle)}
  />
@@ -71,15 +71,15 @@ export default function ( ) {
           <img src="/logo/YouTube_Logo.svg" alt="YouTube" className="logo-large" />
         </Link>
       </div>
-      <div className="nav-middle">
+      <div className="nav-center">
         <input
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           type="text"
           placeholder="Search"
-          className="search-ip"
+          className="search-input"
         />
-        <button type="submit" onClick={handleSearchSubmit} className="search-btn">
+        <button type="submit" onClick={handleSearchSubmit} className="search-button">
           <GoSearch size={20} />
         </button>
       </div>
@@ -91,7 +91,6 @@ export default function ( ) {
                 {/* <RiVideoUploadLine size={20} /> */}
               </Link>
             )}
-            <FaRegBell className="notification-icon" size={20} />
             {user?.avatar ? (
               <img
                 src={user.avatar}

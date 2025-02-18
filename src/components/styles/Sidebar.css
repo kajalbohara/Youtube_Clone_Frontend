@@ -17,7 +17,7 @@
   width: 80px;
 }
 
-.sidebar-menu {
+.sidebar-item {
   display: flex;
   align-items: center;
   padding: 10px;
@@ -28,7 +28,7 @@
   transition: background 0.3s;
 }
 
-.sidebar-menu .icon {
+.sidebar-item .icon {
   font-size: 20px;
   margin-right: 10px;
 }
@@ -36,11 +36,11 @@
   width: min-content;
 }
 
-.collapsed .sidebar-menu {
+.collapsed .sidebar-item {
   justify-content: center;
 }
 
-.collapsed .sidebar-menu .icon {
+.collapsed .sidebar-item .icon {
   margin-right: 0;
 }
 
@@ -55,6 +55,6 @@
   border-top: 1px solid #ddd;
   margin: 10px 0;
 }
-.sidebar-menu:hover {
+.sidebar-item:hover {
   background: #f0f0f0;
 }

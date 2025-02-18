@@ -65,8 +65,8 @@ const Login = () => {
   };
 
   return (
-    <div className="login-main">
-      <form onSubmit={handleFormSubmit} className="form">
+    <div className="login-container">
+      <form onSubmit={handleFormSubmit} className="login-form">
         <h2>User Login</h2>
 
         <label htmlFor="email">Email</label>

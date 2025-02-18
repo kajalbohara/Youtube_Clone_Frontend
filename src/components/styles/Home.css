@@ -1,38 +1,70 @@
 /* Category section */
 .category {
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-    width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-top: 15px;
+}
+
+.category-item {
+  background-color: #f1f1f1;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.category-item:hover {
+  background-color: #d1d1d1;
+}
+
+/* Video container */
+.video-container1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 15px;
+  justify-content: center; /* Center the video cards */
+}
+
+/* Loader styling */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .category {
+    gap: 8px;
+    padding: 8px;
   }
-  
+
   .category-item {
-    background-color: #f1f1f1;
-    padding: 8px 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    padding: 6px 12px;
   }
-  
-  .category-item:hover {
-    background-color: #d1d1d1;
-  }
-  
-  /* Video container */
+
   .video-container1 {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 15px;
+    gap: 15px;
   }
-  
-  /* Loader styling */
-  .loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+}
+
+@media (max-width: 480px) {
+  .category {
+    gap: 6px;
+    padding: 6px;
   }
-  
+
+  .category-item {
+    padding: 4px 10px;
+  }
+
+  .video-container1 {
+    gap: 10px;
+  }
+}

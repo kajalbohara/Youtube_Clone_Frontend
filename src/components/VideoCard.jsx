@@ -5,7 +5,7 @@ import formatNumber from "./utils/formatNumber";
 import timeAgo from "./utils/timeAgo";
 import "./styles/VideoCard.css";
 import { toggleContext } from "../App";
-import { useContext } from "react";
+import React, { useContext } from "react";
 
 const VideoCard = ({ videoId, title, thumbnailUrl, channelId, views, createdAt }) => {
   const [channelData, setChannelData] = useState({});

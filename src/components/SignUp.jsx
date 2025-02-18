@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import "./styles/SignUp.css";
+import "./styles/Signup.css";
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -55,8 +55,8 @@ const SignUp = () => {
   };
 
   return (
-    <div className="signup-main">
-      <form onSubmit={handleFormSubmit} className="form-signup">
+    <div className="signup-container">
+      <form onSubmit={handleFormSubmit} className="signup-form">
         <h2>User SignUp</h2>
 
         <label htmlFor="userName">Username</label>
@@ -100,7 +100,7 @@ const SignUp = () => {
           onChange={handleChange}
         />
 
-        <button type="submit" className="btn_signup">Submit</button>
+        <button type="submit" className="signup-btn">Submit</button>
         <p>
           Already have an account? <Link to="/login" className="login-link">Login here</Link>
         </p>
