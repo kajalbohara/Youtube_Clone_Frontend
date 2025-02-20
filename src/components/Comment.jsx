@@ -10,20 +10,21 @@ import timeAgo from "./utils/timeAgo";
 import "./styles/Comment.css";
 
 const Comment = ({ triggerCommentFetch, createdAt, owner, description, id, video }) => {
-  const [commentOwner, setCommentOwner] = useState({});
-  const [isEditing, setIsEditing] = useState(false);
-  const [editedDescription, setEditedDescription] = useState(description);
-  const user = useSelector((store) => store.user.userDetails);
-  const [op, setOp] = useState(false);
+  const [commentOwner, setCommentOwner] = useState({}); // State to store comment owner data
+  const [isEditing, setIsEditing] = useState(false); // State to manage editing mode
+  const [editedDescription, setEditedDescription] = useState(description); // State to store edited description
+  const user = useSelector((store) => store.user.userDetails); // Get user details from Redux store
+  const [op, setOp] = useState(false); // State to manage options menu visibility
 
   useEffect(() => {
+    // Function to fetch comment owner data
     const fetchOwner = async () => {
       try {
         const { data } = await axios.get(
           `http://localhost:7000/api/users/${owner}`
         );
         if (data) {
-          setCommentOwner(data.user);
+          setCommentOwner(data.user); // Set comment owner data
         }
       } catch (error) {
         console.log(error);
@@ -32,22 +33,24 @@ const Comment = ({ triggerCommentFetch, createdAt, owner, description, id, video
     fetchOwner();
   }, []);
 
+  // Function to delete comment
   const handleDelete = async () => {
     try {
       const result = await axios.delete(
         `http://localhost:7000/api/comment/deleteComment/${id}/${video}/${user?._id}`
       );
       if (result) {
-        toast.success("Comment deleted successfully");
-        triggerCommentFetch();
+        toast.success("Comment deleted successfully"); // Show success message
+        triggerCommentFetch(); // Trigger re-fetching of comments
       }
     } catch (error) {
-      toast.error(error.data.message);
+      toast.error(error.data.message); // Show error message
     } finally {
-      setOp(false);
+      setOp(false); // Close options menu
     }
   };
 
+  // Function to update comment
   const handleUpdate = async () => {
     try {
       const result = await axios.put(
@@ -55,39 +58,45 @@ const Comment = ({ triggerCommentFetch, createdAt, owner, description, id, video
         { description: editedDescription }
       );
       if (result) {
-        toast.success("Comment updated successfully");
-        triggerCommentFetch();
+        toast.success("Comment updated successfully"); // Show success message
+        triggerCommentFetch(); // Trigger re-fetching of comments
       }
     } catch (error) {
-      toast.error(error.data.message);
+      toast.error(error.data.message); // Show error message
     } finally {
-      setOp(false);
-      setIsEditing(false);
+      setOp(false); // Close options menu
+      setIsEditing(false); // Exit editing mode
     }
   };
 
   return (
-    <div className="comment-main">
+    <div className="comment-container">
       <div className="comment-content">
-        <img className="comment-avatar" src={commentOwner?.avatar} alt="avatar" />
-        <div className="comment-data">
-          <h2>
+        <div className="comment-mbl">
+          {/* Comment owner avatar */}
+          <img className="comment-avatar" src={commentOwner?.avatar} alt="avatar" />
+          <p>
+            {/* Comment owner name and time ago */}
             {commentOwner?.userName} • <span className="comment-time">{timeAgo(createdAt)}</span>
-          </h2>
-
-          {isEditing ? (
-            <input
-              className="comment-input"
-              onChange={(e) => setEditedDescription(e.target.value)}
-              type="text"
-              value={editedDescription}
-              required
-            />
-          ) : (
-            <p>{description}</p>
-          )}
-
+          </p>
+        </div>
+        <div className="comment-data">
+          <div className="comment-info">
+            {/* Comment description or input for editing */}
+            {isEditing ? (
+              <input
+                className="comment-input"
+                onChange={(e) => setEditedDescription(e.target.value)}
+                type="text"
+                value={editedDescription}
+                required
+              />
+            ) : (
+              <p id="comment-desc">{description}</p>
+            )}
+          </div>
           <div className="comment-actions">
+            {/* Like, Dislike, and Reply buttons */}
             <button><BiLike /></button>
             <button><BiDislike /></button>
             <button>Reply</button>
@@ -95,6 +104,7 @@ const Comment = ({ triggerCommentFetch, createdAt, owner, description, id, video
         </div>
       </div>
 
+      {/* Options menu for comment owner */}
       {user?._id === commentOwner?._id && (
         <div className="comment-options">
           <HiOutlineDotsVertical className="options-icon" onClick={() => setOp(!op)} />
