@@ -1,0 +1,114 @@
+.upload-video-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+  }
+  
+  .upload-form {
+    width: 90%;
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .video-thumbnail {
+    width: 80px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 50%;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 8px 2px;
+    margin-top: 5px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  .upload-button {
+    background: #1e293b;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  
+  .upload-button:hover {
+    background: #000;
+  }
+  @media (max-width: 600px) {
+    .upload-video-container {
+      padding: 20px 10px;
+    }
+  
+    .upload-form {
+      width: 100%;
+      padding: 15px;
+    }
+ 
+    .form-title {
+      font-size: 18px;
+    }
+  
+    .video-thumbnail {
+      width: 60px;
+    }
+  
+    input,
+    textarea,
+    select {
+      font-size: 14px;
+      padding: 8px 2px;
+    }
+  
+    select {
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      background-color: #fff;
+      cursor: pointer;
+    }
+  
+    select option {
+      font-size: 14px;
+      white-space: normal;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+  
+    .upload-button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  
