@@ -1,5 +1,4 @@
 .login-container {
-  background-color: #f8fafc;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -29,7 +28,7 @@
 }
 
 .login-form input {
-  padding: 8px;
+  padding: 8px 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-top: 5px;
@@ -57,4 +56,75 @@
 
 .signup-link:hover {
   text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .account-container {
+    padding: 10px;
+  }
+  
+  .account-box {
+    padding: 15px;
+  }
+  
+  .avatar-img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .channel-logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .login-form {
+    width: 80%;
+  }
+  .login-form input {
+    padding: 8px 2px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .account-container {
+    margin: 10px auto;
+    padding: 5px;
+  }
+  
+  .account-box {
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .avatar-img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .section-title {
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .channel-logo {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .channel-container .channel-Details h2 {
+    font-size: 16px;
+  }
+
+  .login-form {
+    width: 100%;
+    padding: 15px;
+  }
+  .login-form input {
+    padding: 8px 2px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+  }
 }

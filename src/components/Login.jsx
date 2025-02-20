@@ -18,11 +18,11 @@ const Login = () => {
 
   useEffect(() => {
     if (user && Object.keys(user).length > 0) {
-      navigate("/");
+      navigate("/"); // Redirect to home if user is already logged in
     }
   }, [navigate, user]);
 
-  // login function
+  // Login function
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     
@@ -38,11 +38,10 @@ const Login = () => {
         password: formData.password });
   
       if (data) {
-        // console.log("Login successful");
         toast.success("Login successful!");
-        dispatch(setUserState(data.user));
-        dispatch(setToken(data.jwtToken));
-        navigate("/");
+        dispatch(setUserState(data.user)); // Set user state in Redux store
+        dispatch(setToken(data.jwtToken)); // Set token in Redux store
+        navigate("/"); // Redirect to home
       }
     } catch (error) {
       console.log("Login error:", error.response?.data?.message);
@@ -55,10 +54,8 @@ const Login = () => {
       }
     }
   };
-  
-  
 
-  // onchange function
+  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });

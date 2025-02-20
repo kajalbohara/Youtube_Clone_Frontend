@@ -18,14 +18,13 @@ const SignUp = () => {
 
   useEffect(() => {
     if (user && Object.keys(user).length > 0) {
-      navigate("/");
+      navigate("/"); // Redirect to home if user is already logged in
     }
   }, [navigate, user]);
 
-
+  // Handle form submission
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    // console.log("Form Data being sent:", formData);
   
     if (!formData.email || !formData.password || !formData.userName || !formData.avatar) {
       toast.error("All fields are required");
@@ -47,8 +46,8 @@ const SignUp = () => {
       toast.error(error.response?.data?.message || "Signup failed");
     }
   };
-  
-  
+
+  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -90,10 +89,10 @@ const SignUp = () => {
           onChange={handleChange}
         />
 
-        <label htmlFor="avatar">Avatar Link</label>
+        <label htmlFor="avatar-form">Avatar Link</label>
         <input
           required
-          id="avatar"
+          id="avatar-form"
           type="text"
           value={formData.avatar}
           name="avatar"

@@ -1,5 +1,4 @@
 .signup-container {
-  background-color: #f8fafc;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -18,7 +17,7 @@
 }
 
 .signup-form h2 {
-  font-size: 20px;
+  font-size: 20px;   
   margin-bottom: 15px;
   text-align: center;
 }
@@ -29,7 +28,7 @@
 }
 
 .signup-form input {
-  padding: 8px;
+  padding: 8px 2px;
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-top: 5px;
@@ -57,4 +56,32 @@
 
 .login-link:hover {
   text-decoration: underline;
+}
+@media (max-width: 600px) {
+  .signup-container {
+    padding: 10px;
+  }
+
+  .signup-form {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .signup-form h2 {
+    font-size: 18px;
+  }
+
+  .signup-form input {
+    font-size: 14px;
+    padding: 8px 2px;
+  }
+
+  .signup-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .login-link {
+    font-size: 14px;
+  }
 }
