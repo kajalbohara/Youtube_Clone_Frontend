@@ -1,13 +1,18 @@
 .video-main {
-  width: 22rem; /* Slightly reduce width to prevent merging */
+  width: 380px; /* Slightly reduce width to prevent merging */
+  height: 290px;
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   flex-shrink: 0; /* Prevents shrinking */
-  margin: 0 auto; /* Center the video card */
 }
 
-.thumbnail {
+.video-maintoggle {
+  width: 320px;
+  height: 270px;
+}
+
+.vid-thumbnail {
   width: 100%;
   height: 12rem; /* Adjust height as per your design */
   border: 1px solid black;
@@ -43,15 +48,15 @@
   font-size: 14px;
   font-weight: bold;
   color: #222;
-  margin: 0px;
+  margin:0px;
 }
 
 .channel-titles {
   font-size: 18px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  color: black;
-  text-decoration: none;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: black;
+    text-decoration: none;
 }
 
 .channel-title:hover {
@@ -65,59 +70,32 @@
   gap: 0.5rem;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
+/* Responsiveness  */
+@media (max-width: 600px) {
   .video-main {
-    width: 18rem;
+    width: 94vw; /* Slightly reduce width to prevent merging */
+    height: 70%;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
   }
-
-  .thumbnail {
-    height: 10rem;
-  }
-
-  .logo {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-
-  .vid-title {
-    font-size: 12px;
-  }
-
-  .channel-titles {
-    font-size: 16px;
-  }
-
-  .videos-info {
-    font-size: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .video-main {
+  .vid-thumbnail {
     width: 100%;
-    padding: 0 1rem; /* Add padding to prevent touching the edges */
-  }
-
-  .thumbnail {
-    height: 8rem;
-  }
-
-  .logo {
-    width: 2rem;
-    height: 2rem;
-  }
-
-  .vid-title {
-    font-size: 10px;
-  }
-
-  .channel-titles {
-    font-size: 14px;
-  }
-
-  .videos-info {
-    font-size: 8px;
+    height: 70%; /* Adjust height as per your design */
+    object-fit: cover;
+    display: block;
+    border-radius: 0px;
   }
 }
 
+@media (min-width:768px ) and (max-width:1024px) {
+  .video-main{
+    width:300px;
+    height: 270px;
+  }
+  .vid-thumbnail {
+
+  }
+  
+  
+}

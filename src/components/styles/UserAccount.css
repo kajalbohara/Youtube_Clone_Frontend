@@ -1,5 +1,5 @@
 /* Account Page Container */
-.user-account-container {
+.account-container {
   width: 100%;
   max-width: 800px;
   margin: 20px auto;
@@ -7,14 +7,14 @@
 }
 
 /* Section Titles */
-.user-section-title {
+.section-title {
   font-size: 20px;
   font-weight: bold;
   padding-bottom: 10px;
 }
 
 /* Account Box (General Styling) */
-.user-account-box {
+.account-box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,14 +22,14 @@
   width: 100%;
   padding: 20px;
   border: 1px solid black;
-  border-radius: 8px;
+  border-radius: 5px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
   margin-bottom: 20px;
 }
 
 /* Avatar Image */
-.user-avatar-img {
+.avatar-img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -37,23 +37,23 @@
 }
 
 /* Account Details */
-.user-account-details {
+.account-details {
   text-align: center;
 }
 
-.user-email-info {
+.email-info {
   padding: 5px 0;
 }
 
 /* Channel Section */
-.user-channel-container {
+.channel-container {
   padding: 15px;
   text-align: center;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Channel Logo */
-.user-channel-logo {
+.channel-logo {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -61,106 +61,68 @@
 }
 
 /* Channel Details */
-.user-channel-details {
+.channel-container .channel-Details {
   margin-top: 8px;
   width: 100%;
   max-width: 200px;
+  
 }
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  .user-account-container {
-    padding: 15px;
+@media (max-width: 480px) {
+  .account-container {
+    margin: 10px auto;
+    padding: 5px;
   }
-
-  .user-section-title {
+  
+  .account-box {
+    padding: 10px;
+    gap: 5px;
+    justify-content: center;
+    align-content: center;
+    width:89%;
+  }
+  .section-title {
+    font-size: 15px;
+    font-weight: bold;
+    justify-items: center;
+  }
+  
+  .avatar-img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .section-title {
     font-size: 18px;
+    text-align: center;
   }
-
-  .user-account-box {
+  
+  .channel-logo {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .channel-container .channel-Details h2 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .account-container {
+    padding: 10px;
+  }
+  
+  .account-box {
     padding: 15px;
+    gap: 10px;
+    width: 80%
   }
-
-  .user-avatar-img {
+  
+  .avatar-img {
     width: 80px;
     height: 80px;
   }
-
-  .user-channel-logo {
+  
+  .channel-logo {
     width: 70px;
     height: 70px;
-  }
-}
-
-@media (max-width: 480px) {
-  .user-account-container {
-    padding: 10px;
-  }
-
-  .user-section-title {
-    font-size: 16px;
-  }
-
-  .user-account-box {
-    padding: 10px;
-  }
-
-  .user-avatar-img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .user-channel-logo {
-    width: 60px;
-    height: 60px;
-  }
-}
-
-/* Additional Media Queries for Better Responsiveness */
-@media (max-width: 600px) {
-  .user-account-container {
-    padding: 10px;
-    margin: 10px auto;
-  }
-
-  .user-account-box {
-    padding: 10px;
-    gap: 10px;
-  }
-
-  .user-avatar-img {
-    width: 70px;
-    height: 70px;
-  }
-
-  .user-channel-logo {
-    width: 60px;
-    height: 60px;
-  }
-}
-
-@media (max-width: 400px) {
-  .user-account-container {
-    padding: 5px;
-    margin: 5px auto;
-  }
-
-  .user-section-title {
-    font-size: 14px;
-  }
-
-  .user-account-box {
-    padding: 5px;
-    gap: 8px;
-  }
-
-  .user-avatar-img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .user-channel-logo {
-    width: 50px;
-    height: 50px;
   }
 }

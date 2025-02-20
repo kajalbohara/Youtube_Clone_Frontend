@@ -19,7 +19,7 @@ const VideoView = () => {
   const [comment, setComment] = useState("");
   const [commentTrigger, setCommentTrigger] = useState(false);
   const user = useSelector((store) => store.user.userDetails);
-  const token = useSelector((store) => store.user.token);   
+  const token = useSelector((store) => store.user.token);
 
   // Like video
   const handleLike = async () => {
@@ -192,59 +192,57 @@ const VideoView = () => {
   };
 
   return (
-    <div className="video-view-container">
+    <div className="video-view-root">
       {/* Left Section: Video, Details, and Comments */}
-      <div className="video-left">
+      <div className="video-left-section">
         <iframe
-          className="video-iframe"
+          className="video-iframe-element"
           src={`https://www.youtube.com/embed/${videoUrl}?autoplay=1&rel=0`}
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
-                
-        <h2 className="vid-name">{`${videoData?.title}`} </h2>
 
-        <div className="operations">
-
-          <div className="left-group">
-            <Link to={`/channel/${channelData._id}`} className="channel-link">
+        <div className="video-operations">
+        <h2 id="video-tit">{`${videoData?.title}`} </h2>
+          <div className="video-left-group">
+            <Link to={`/channel/${channelData._id}`} className="video-channel-link">
               <img
-                className="channel"
+                className="video-channel-image"
                 src={channelData.channelLogo}
                 alt="Channel logo"
               />
-              <h2 className="chnl-nm">{channelData.channelName}</h2>
+              <h2 className="video-channel-name">{channelData.channelName}</h2>
             </Link>
-            <button onClick={handleSubscribe} className="subscribe-btn">
+            <button onClick={handleSubscribe} className="video-subscribe-button">
               subscribe
             </button>
           </div>
-          <div className="vid-actions">
-            <button onClick={handleLike} className="action-btn">
+          <div className="video-actions">
+            <button onClick={handleLike} className="video-action-button">
               <BiLike />
               <span>|</span>
               {videoData.likes ? videoData.likes.length : 0}
             </button>
-            <button onClick={handleDisLike} className="action-btn">
+            <button onClick={handleDisLike} className="video-action-button">
               <BiDislike />
               <span>|</span>
               {videoData.dislikes ? videoData.dislikes.length : 0}
             </button>
-            <button className="action-btn">save</button>
+            <button className="video-action-button">save</button>
           </div>
         </div>
 
-        <div className="comments-section">
-          <div className="comments-header">
+        <div className="video-comments-section">
+          <div className="video-comments-header">
             <h2>{formatNumber(videoData.views)} Views •</h2>
             <h2>{timeAgo(videoData.createdAt)}</h2>
           </div>
-          <p className="comment-text">{videoData.description}</p>
+          <p className="video-comment-text">{videoData.description}</p>
         </div>
 
-        <div className="addComment">
+        <div className="video-add-comment">
           <input
             type="text"
             name="comment"
@@ -255,7 +253,7 @@ const VideoView = () => {
           <button onClick={handleComment}>Comment</button>
         </div>
 
-        <div className="comments-list">
+        <div className="video-comments-list">
           {comments && comments.length > 0
             ? comments.map((item) => (
                 <Comment
@@ -273,18 +271,18 @@ const VideoView = () => {
       </div>
 
       {/* Right Section: Related Videos */}
-      <div className="sideView">
-        <h2 className="sideView-title">Channel related videos</h2>
-        <div className="sideVideosList">
+      <div className="video-side-view">
+        <h2 className="video-side-view-title">Channel related videos</h2>
+        <div className="video-side-videos-list">
           {channelVideos && channelVideos.length > 0
             ? channelVideos.map((item) => (
-                <Link to={`/video/${item._id}`} key={item._id} className="boxVideo">
+                <Link to={`/video/${item._id}`} key={item._id} className="video-box">
                   <img
-                    className="box-video-img"
+                    className="video-box-thumbnail"
                     src={item.thumbnailUrl}
                     alt="video thumbnail"
                   />
-                  <div className="details">
+                  <div className="video-box-details">
                     <h2>
                       {item.title.length > 55
                         ? item.title.slice(0, 55) + "..."

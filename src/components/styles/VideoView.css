@@ -1,5 +1,5 @@
 /* ===== Root Container ===== */
-.video-view-container {
+.video-view-root {
   display: flex;
   flex-direction: row;
   justify-content: space-between; /* Ensures space is properly used */
@@ -8,36 +8,36 @@
 }
 
 /* ===== Left Section (Video & Comments) ===== */
-.video-left {
+.video-left-section {
   flex: 1; /* Takes remaining space */
   min-width: 40rem; /* Prevents excessive shrinking */
   max-width: 65%; /* Limits max width */
   padding: 1rem;
 }
 
-/* ===== Video Iframe ===== */  
-.video-iframe {
+/* ===== Video Iframe ===== */
+.video-iframe-element {
   width: 100%;
   height: 28rem;
   border: none;
 }
 
 /* ===== Operations (Channel Info & Action Buttons) ===== */
-.vid-name {
-  margin-bottom: 0px;
-}
-
-.operations {
+.video-operations {
   display: flex;
-  flex-direction: row;
+  flex-direction:column;
   gap: 0.5rem;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
 }
-
+#video-tit{
+  font-size: x-large;
+  margin: 0px;
+  align-self: start;
+}
 /* Left group (Channel logo, name, subscribe button) */
-.left-group {
+.video-left-group {
   display: flex;
   gap: 0.5rem;
   padding-bottom: 0.5rem;
@@ -46,7 +46,7 @@
 }
 
 /* Channel link */
-.channel-link {
+.video-channel-link {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -55,7 +55,7 @@
 }
 
 /* Channel image */
-.channel {
+.video-channel-image {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
@@ -64,15 +64,14 @@
 }
 
 /* Channel name */
-.chnl-nm {
+.video-channel-name {
   font-weight: bold;
   cursor: pointer;
-  font-size: 20px;
 }
 
 /* Subscribe button */
-.subscribe-btn {
-  padding: 10px 15px;
+.video-subscribe-button {
+  padding: 0.25rem 1rem;
   cursor: pointer;
   background-color: #1e293b;
   color: white;
@@ -81,12 +80,12 @@
   transition: background-color 0.2s ease;
 }
 
-.subscribe-btn:hover {
+.video-subscribe-button:hover {
   background-color: black;
 }
 
 /* Right actions (like, dislike, save) */
-.vid-actions {
+.video-actions {
   display: flex;
   gap: 0.5rem;
   align-items: center;
@@ -96,7 +95,7 @@
 }
 
 /* Action buttons */
-.action-btn {
+.video-action-button {
   padding: 0.25rem 1rem;
   background-color: #e2e8f0;
   border: none;
@@ -108,30 +107,30 @@
 }
 
 /* ===== Comments Section ===== */
-.comments-section {
+.video-comments-section {
   padding: 0.5rem;
   background-color: #f1f5f9;
 }
 
-.comments-header {
+.video-comments-header {
   display: flex;
   gap: 0.5rem;
   padding: 0.5rem 0;
 }
 
-.comment-text {
+.video-comment-text {
   font-size: 16px;
 }
 
 /* ===== Add Comment ===== */
-.addComment {
+.video-add-comment {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   margin-top: 1rem;
 }
 
-.addComment input {
+.video-add-comment input {
   outline: none;
   width: 100%;
   border: none;
@@ -141,7 +140,7 @@
   font-size: 16px;
 }
 
-.addComment button {
+.video-add-comment button {
   background-color: white;
   font-size: 16px;
   width: 9rem;
@@ -151,13 +150,13 @@
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.addComment button:hover {
+.video-add-comment button:hover {
   background-color: black;
   color: white;
 }
 
 /* ===== Comments List ===== */
-.comments-list {
+.video-comments-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -165,33 +164,34 @@
 }
 
 /* ===== Side View (Related Videos) ===== */
-.sideView {
- /* Takes up 30% of the container */
+.video-side-view {
+  flex: 0 0 30%; /* Takes up 30% of the container */
   max-width: 25rem; /* Prevents it from getting too large */
   padding: 1rem;
   overflow: hidden; /* Prevents overflow issues */
 }
 
 /* Side View Title */
-.sideView-title {
+.video-side-view-title {
   font-size: 1.25rem;
   padding: 1rem 0;
 }
 
 /* ===== Side Videos List (Container) ===== */
-.sideVideosList {
+.video-side-videos-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  max-width: 95%; /* Prevents overflow */
+  gap: 1rem;
+  max-width: 100%; /* Prevents overflow */
+  overflow: hidden;
 }
 
 /* ===== Each Video Box (Related Video) ===== */
-.boxVideo {
+.video-box {
   display: flex;
   align-items: flex-start;
   gap: 0.5rem;
-  padding: 10px;
+  padding: 0.5rem;
   border-radius: 0.375rem;
   box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1),
               0 2px 4px -1px rgba(0,0,0,0.06);
@@ -203,21 +203,21 @@
 }
 
 /* Video Thumbnail */
-.box-video-img {
+.video-box-thumbnail {
   width: 40%; /* Adjusts width relative to container */
-  max-width: 10rem;
-  height: 80px;
+  max-width: 10rem; /* Prevents too large thumbnails */
+  height: 100px;
   border-radius: 0.375rem;
   object-fit: cover;
 }
 
 /* Details inside the box */
-.details {
+.video-box-details {
   flex: 1;
   overflow: hidden;
 }
 
-.details h2 {
+.video-box-details h2 {
   font-size: 14px;
   margin: 0.2rem 0;
   white-space: nowrap;
@@ -225,71 +225,222 @@
   text-overflow: ellipsis; /* Truncates long titles */
 }
 
-/* Media Queries for Responsiveness */
+/* ===== Responsive Design for Mobile Screens ===== */
 @media (max-width: 768px) {
-  .video-left {
-    min-width: 30rem;
+  .video-view-root {
+    flex-direction: column; /* Stack on smaller screens */
   }
 
-  .video-iframe {
-    height: 20rem;
+  .video-left-section {
+    max-width: 100%; /* Full width */
+    min-width: auto;
   }
 
-  .chnl-nm {
-    font-size: 18px;
+  .video-side-view {
+    flex: 1; /* Take full width */
+    max-width: 100%;
   }
 
-  .subscribe-btn {
-    padding: 8px 12px;
+  .video-box {
+    flex-direction: row; /* Keep horizontal layout */
+    align-items: center;
   }
 
-  .vid-actions {
+  .video-box-thumbnail {
+    width: 40%;
+    height:40%  
+  }
+    .video-channel-name {
+      padding: 5px 2px;
+      font-size: 10px;
+    }
+    .video-comment-text{
+      font-size: 15px;
+    }
+    
+}
+@media (max-width: 768px) {
+  .video-left-section {
+    padding: 0.5rem;
+  }
+
+  .video-iframe-element {
+    height: 22rem;
+  }
+
+  .video-channel-image {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .video-subscribe-button {
+    padding: 0.2rem 0.8rem;
     font-size: 14px;
   }
 
-  .action-btn {
-    padding: 0.25rem 0.75rem;
+  .video-action-button {
+    padding: 0.2rem 0.8rem;
+    font-size: 14px;
   }
 
-  .sideView {
-    flex: 0 0 100%;
+  .video-comments-section {
+    padding: 5px 2px;
+    font-size: 10px;
+  }
+  .video-comment-text{
+    font-size: 15px;
+  }
+
+  .video-side-view {
     max-width: 100%;
+    padding: 0.5rem;
   }
 
-  .box-video-img {
-    height: 60px;
+  .video-box-thumbnail {
+    width: 40%;
+    height: 100px;
   }
+
+  .video-box-details h2 {
+    font-size: 13px;
+  }
+  .video-channel-name {
+    padding: 5px 2px;
+    font-size: 10px;
+  }
+  
 }
 
 @media (max-width: 480px) {
-  .video-left {
-    min-width: 100%;
+  .video-iframe-element {
+    height: 18rem;
+  }
+
+  .video-channel-image {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .video-subscribe-button,
+  .video-action-button {
+    font-size: 12px;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .video-box {
+    flex-direction: row;
+    align-items: center;
+  }
+  #video-tit{
+    font-size: medium;
+   
+  }
+  .video-box-thumbnail {
+    width: 40%;
+    max-width: 40%;
+  }
+
+  .video-box-details h2 {
+    font-size: 12px;
+  }
+  .video-channel-name {
+    padding: 5px 2px;
+    font-size: 10px;
+  
+}
+.video-comment-text{
+  font-size: 15px;
+}
+}
+
+@media (max-width: 320px) {
+  .video-view-root {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .video-left-section {
+    padding: 0.5rem;
+    min-width: auto;
     max-width: 100%;
   }
 
-  .video-iframe {
-    height: 15rem;
+  .video-iframe-element {
+    height: 16rem;
   }
 
-  .chnl-nm {
-    font-size: 16px;
+  .video-operations {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
-  .subscribe-btn {
-    padding: 6px 10px;
+  .video-left-group {
+    flex-direction: row;
+    /* align-items: flex-start; */
   }
 
-  .vid-actions {
+  .video-channel-image {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .video-channel-name {
     font-size: 12px;
   }
 
-  .action-btn {
-    padding: 0.25rem 0.5rem;
+  .video-subscribe-button {
+    padding: 0.2rem 0.6rem;
+    font-size: 12px;
   }
 
-  .sideView {
-    display: none; /* Hide side view on small screens */
+  .video-actions {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .video-action-button {
+    padding: 0.2rem 0.6rem;
+    font-size: 12px;
+  }
+
+  .video-comments-section {
+    padding: 0.5rem;
+  }
+
+  .video-comment-text {
+    font-size: 14px;
+  }
+
+  .video-add-comment input {
+    font-size: 14px;
+  }
+
+  .video-add-comment button {
+    font-size: 14px;
+    padding: 0.2rem;
+  }
+
+  .video-side-view {
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+
+  .video-side-view-title {
+    font-size: 1rem;
+  }
+
+  .video-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .video-box-thumbnail {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .video-box-details h2 {
+    font-size: 12px;
   }
 }
-
-
