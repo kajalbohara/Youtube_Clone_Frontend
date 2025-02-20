@@ -1,3 +1,4 @@
+/* Container for the error page */
 .error-container {
   text-align: center;
   display: flex;
@@ -8,15 +9,18 @@
   gap: 10px;
 }
 
+/* Styling for the error code */
 .error-code {
   font-size: 72px;
   font-weight: bold;
 }
 
+/* Styling for the error message */
 .error-message {
   font-size: 20px;
 }
 
+/* Styling for the error button */
 .error-button {
   border: 1px solid black;
   padding: 10px 24px;
@@ -26,6 +30,7 @@
   transition: all 0.3s ease-in-out;
 }
 
+/* Hover effect for the error button */
 .error-button:hover {
   background-color: black;
   color: white;

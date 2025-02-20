@@ -1,68 +1,76 @@
+/* Container for the update video form page */
 .update-video-container {
-    background-color: #f8fafc;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 0;
-  }
-  
-  .update-video-form {
-    width: 90%;
-    max-width: 500px;
-    background: white;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: center;
-  }
-  
-  .video-thumbnail {
-    width: 80px;
-    margin: 10px auto;
-    display: block;
-    border-radius: 50%;
-  }
-  
-  label {
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  
-  input,
-  textarea,
-  select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #cbd5e1;
-    border-radius: 4px;
-  }
-  
-  textarea {
-    resize: none;
-  }
-  
-  .save-button {
-    background: #1e293b;
-    color: white;
-    border: none;
-    padding: 10px;
-    margin-top: 15px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background 0.3s;
-  }
-  
-  .save-button:hover {
-    background: #000;
-  }
-  
+  background-color: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+/* Styling for the update video form */
+.update-video-form {
+  width: 90%;
+  max-width: 500px;
+  background: white;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling for the form title */
+.form-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Styling for the video thumbnail */
+.video-thumbnail {
+  width: 80px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 50%;
+}
+
+/* Styling for form labels */
+label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Styling for form inputs, textareas, and selects */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+}
+
+/* Prevent resizing of textareas */
+textarea {
+  resize: none;
+}
+
+/* Styling for the save button */
+.save-button {
+  background: #1e293b;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+/* Hover effect for the save button */
+.save-button:hover {
+  background: #000;
+}

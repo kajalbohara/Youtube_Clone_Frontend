@@ -1,3 +1,4 @@
+/* Container for each video */
 .video-container {
   display: flex;
   flex-direction: column;
@@ -11,51 +12,60 @@
   width: 70%;
 }
 
+/* Hover effect for video container */
 .video-container:hover {
   transform: scale(1.02);
 }
 
+/* Styling for the video thumbnail */
 .video-container__thumbnail {
   width: 100%;
   border-radius: 8px;
 }
 
+/* Container for video data */
 .video-container__data {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
+/* Styling for video information */
 .video-container__info {
   font-size: 14px;
-  gap:4px;
+  gap: 4px;
 }
 
+/* Styling for video title */
 .video-container__title {
   font-weight: bold;
   font-size: 16px;
 }
 
+/* Styling for video statistics */
 .video-container__stats {
   color: gray;
   font-size: 12px;
 }
 
+/* Container for channel information */
 .video-container__channel-info {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
+/* Styling for channel logo */
 .video-container1__channel-logo {
-display: flex;
-flex-direction: row;
+  display: flex;
+  flex-direction: row;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   border: 1px solid #000;
 }
 
+/* Styling for channel name */
 .video-container2__channel-name {
   font-size: 14px;
   font-weight: bold;
@@ -63,74 +73,76 @@ flex-direction: row;
   flex-direction: row;
 }
 
+/* Styling for video description */
 .video-container__description {
   font-size: 12px;
   color: #555;
   display: none;
 }
-.flexing{
-display: flex;
-flex-direction: row;
-gap:10px;
+
+/* Flex container for additional layout */
+.flexing {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
-/* 🔹 Mobile Responsive Adjustments */
+/* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
-.video-container {
-  padding: 12px;
-  gap: 12px;
-  max-width: 90%;
-}
+  .video-container {
+    padding: 12px;
+    gap: 12px;
+    max-width: 90%;
+  }
 
-.video-container__title {
-  font-size: 14px;
-}
+  .video-container__title {
+    font-size: 14px;
+  }
 
-.video-container__info {
-  font-size: 12px;
-}
+  .video-container__info {
+    font-size: 12px;
+  }
 
-.video-container__stats {
-  font-size: 10px;
-}
+  .video-container__stats {
+    font-size: 10px;
+  }
 
-.video-container__channel-logo {
-  width: 35px;
-  height: 35px;
-}
+  .video-container__channel-logo {
+    width: 35px;
+    height: 35px;
+  }
 
-.video-container__channel-name {
-  font-size: 13px;
-}
+  .video-container__channel-name {
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 480px) {
-.video-container {
-  padding: 10px 30px;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
+  .video-container {
+    padding: 10px 30px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
 
-}
+  .video-container__title {
+    font-size: 13px;
+  }
 
-.video-container__title {
-  font-size: 13px;
-}
+  .video-container__info {
+    font-size: 11px;
+  }
 
-.video-container__info {
-  font-size: 11px;
-}
+  .video-container__stats {
+    font-size: 9px;
+  }
 
-.video-container__stats {
-  font-size: 9px;
-}
+  .video-container__channel-logo {
+    width: 30px;
+    height: 30px;
+  }
 
-.video-container__channel-logo {
-  width: 30px;
-  height: 30px;
-}
-
-.video-container__channel-name {
-  font-size: 12px;
-}
+  .video-container__channel-name {
+    font-size: 12px;
+  }
 }

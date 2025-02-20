@@ -1,3 +1,4 @@
+/* Styling for the video card container */
 .video-card {
     width: 24rem;
     border: 1px solid black;
@@ -5,48 +6,56 @@
     margin: 10px;
     background-color: #f9f9f9;
     border-radius: 8px;
-  }
-  
-  .video-thumbnail_class {
+}
+
+/* Styling for the video thumbnail */
+.video-thumbnail_class {
     width: 100%;
     height: 180px;
     object-fit: cover;
     border-radius: 8px;
-  }
-  
-  .video-info {
+}
+
+/* Container for video information */
+.video-info {
     display: flex;
     justify-content: space-between;
     align-items: start;
     padding-top: 10px;
-  }
-  
-  .description {
+}
+
+/* Styling for the description section */
+.description {
     flex: 1;
-  }
-  
-  .video-title {
+}
+
+/* Styling for the video title */
+.video-title {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 5px;
-  }
-  
-  .video-meta {
+}
+
+/* Styling for the video metadata */
+.video-meta {
     font-size: 14px;
     color: gray;
-  }
-  
-  .video-options {
+}
+
+/* Container for video options */
+.video-options {
     position: relative;
     padding: 10px;
-  }
-  
-  .options-icon {
+}
+
+/* Styling for the options icon */
+.options-icon {
     cursor: pointer;
     font-size: 20px;
-  }
-  
-  .options-menu {
+}
+
+/* Styling for the options menu */
+.options-menu {
     position: absolute;
     top: 25px;
     right: 0;
@@ -57,94 +66,142 @@
     padding: 5px 0;
     min-width: 100px;
     z-index: 10;
-  }
-  
-  .options-menu.hide {
+}
+
+/* Hide the options menu */
+.options-menu.hide {
     display: none;
-  }
-  
-  .options-menu.show {
+}
+
+/* Show the options menu */
+.options-menu.show {
     display: block;
-  }
-  
-  .option-item {
+}
+
+/* Styling for individual option items */
+.option-item {
     display: flex;
     align-items: center;
     gap: 5px;
     padding: 8px 15px;
     cursor: pointer;
     font-size: 14px;
-  }
-  
-  .option-item:hover {
-    background-color: #f1f1f1;
-  }
-  /* 🔹 Mobile Responsive Styles */
-@media (max-width: 768px) {
-  .video-card {
-    width: 100%;
-    margin: 10px 0;
-    padding: 8px;
-  }
-
-  .video-thumbnail_class {
-    height: 150px;
-  }
-
-  .video-title {
-    font-size: 14px;
-  }
-
-  .video-meta {
-    font-size: 12px;
-  }
-
-  .options-icon {
-    font-size: 18px;
-  }
-
-  .option-item {
-    font-size: 12px;
-    padding: 6px 12px;
-  }
-  .description {
-    flex: 1;
-    padding:10px 2px;
-    font-size: 15px;
-
-  }
 }
 
-/* 🔹 Extra Small Devices */
+/* Hover effect for option items */
+.option-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    /* Adjust width and margin for video card on mobile */
+    .video-card {
+        width: 100%;
+        margin: 10px 0;
+        padding: 8px;
+    }
+
+    /* Adjust height for video thumbnail on mobile */
+    .video-thumbnail_class {
+        height: 150px;
+    }
+
+    /* Adjust font size for video title on mobile */
+    .video-title {
+        font-size: 14px;
+    }
+
+    /* Adjust font size for video metadata on mobile */
+    .video-meta {
+        font-size: 12px;
+    }
+
+    /* Adjust font size for options icon on mobile */
+    .options-icon {
+        font-size: 18px;
+    }
+
+    /* Adjust padding and font size for option items on mobile */
+    .option-item {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    /* Adjust padding and font size for description on mobile */
+    .description {
+        flex: 1;
+        padding: 10px 2px;
+        font-size: 15px;
+    }
+
+    /* Adjust position for options menu on mobile */
+    .options-menu {
+        position: absolute;
+        top: 25px;
+        right: -75px;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        list-style: none;
+        padding: 5px 0;
+        min-width: 100px;
+        z-index: 10;
+    }
+}
+
+/* Extra Small Devices */
 @media (max-width: 480px) {
-  .video-card {
-    padding: 6px 4px;
-    margin: 5px 2px;
-  }
+    /* Adjust padding and margin for video card on extra small devices */
+    .video-card {
+        padding: 6px 4px;
+        margin: 5px 2px;
+    }
 
-  .video-thumbnail_class {
-    height: 120px;
-  }
+    /* Adjust height for video thumbnail on extra small devices */
+    .video-thumbnail_class {
+        height: 120px;
+    }
 
-  .video-title {
-    font-size: 13px;
-  }
+    /* Adjust font size for video title on extra small devices */
+    .video-title {
+        font-size: 13px;
+    }
 
-  .video-meta {
-    font-size: 11px;
-  }
+    /* Adjust font size for video metadata on extra small devices */
+    .video-meta {
+        font-size: 11px;
+    }
 
-  .options-icon {
-    font-size: 16px;
-  }
+    /* Adjust font size for options icon on extra small devices */
+    .options-icon {
+        font-size: 16px;
+    }
 
-  .option-item {
-    font-size: 11px;
-    padding: 5px 10px;
-  }
-  .description {
-    flex: 1;
-    padding:10px 2px;
-    font-size: 15px;
-  }
+    /* Adjust position for options menu on extra small devices */
+    .options-menu {
+        position: absolute;
+        top: 25px;
+        right: -75px;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        list-style: none;
+        padding: 5px 0;
+        min-width: 100px;
+        z-index: 10;
+    }
+
+    /* Adjust padding and font size for option items on extra small devices */
+    .option-item {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+
+    /* Adjust padding and font size for description on extra small devices */
+    .description {
+        flex: 1;
+        padding: 10px 2px;
+        font-size: 15px;
+    }
 }

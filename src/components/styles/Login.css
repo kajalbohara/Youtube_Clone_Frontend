@@ -1,3 +1,4 @@
+/* Container for the login page */
 .login-container {
   min-height: 100vh;
   display: flex;
@@ -5,6 +6,7 @@
   justify-content: center;
 }
 
+/* Styling for the login form */
 .login-form {
   background: white;
   padding: 20px;
@@ -16,17 +18,20 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Styling for the form title */
 .login-form h2 {
   font-size: 20px;
   margin-bottom: 15px;
   text-align: center;
 }
 
+/* Styling for form labels */
 .login-form label {
   font-weight: 600;
   margin-top: 10px;
 }
 
+/* Styling for form inputs */
 .login-form input {
   padding: 8px 5px;
   border: 1px solid #ccc;
@@ -34,6 +39,7 @@
   margin-top: 5px;
 }
 
+/* Styling for the login button */
 .login-btn {
   background-color: #1e293b;
   color: white;
@@ -44,41 +50,49 @@
   margin-top: 15px;
 }
 
+/* Hover effect for the login button */
 .login-btn:hover {
   background-color: black;
 }
 
+/* Styling for the signup link */
 .signup-link {
   font-weight: bold;
   color: #007bff;
   text-decoration: none;
 }
 
+/* Hover effect for the signup link */
 .signup-link:hover {
   text-decoration: underline;
 }
+
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .account-container {
     padding: 10px;
   }
-  
+
   .account-box {
     padding: 15px;
   }
-  
+
   .avatar-img {
     width: 80px;
     height: 80px;
   }
-  
+
   .channel-logo {
     width: 70px;
     height: 70px;
   }
 
+  /* Adjust width for login form on smaller screens */
   .login-form {
     width: 80%;
   }
+
+  /* Adjust padding for inputs on smaller screens */
   .login-form input {
     padding: 8px 2px;
     border: 1px solid #ccc;
@@ -87,40 +101,44 @@
   }
 }
 
+/* Extra Small Devices */
 @media (max-width: 480px) {
   .account-container {
     margin: 10px auto;
     padding: 5px;
   }
-  
+
   .account-box {
     padding: 10px;
     gap: 10px;
   }
-  
+
   .avatar-img {
     width: 60px;
     height: 60px;
   }
-  
+
   .section-title {
     font-size: 18px;
     text-align: center;
   }
-  
+
   .channel-logo {
     width: 60px;
     height: 60px;
   }
-  
+
   .channel-container .channel-Details h2 {
     font-size: 16px;
   }
 
+  /* Adjust width and padding for login form on extra small devices */
   .login-form {
     width: 100%;
     padding: 15px;
   }
+
+  /* Adjust padding for inputs on extra small devices */
   .login-form input {
     padding: 8px 2px;
     border: 1px solid #ccc;

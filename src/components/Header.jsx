@@ -12,7 +12,7 @@ import { setUserChannelDetails } from "./utils/userChannelSlice";
 import axios from "axios";
 import "./styles/Header.css";
 import { toggleContext } from "../App";
-import { useContext } from "react";
+import React ,{ useContext } from "react";
 
 export default function Header() {
   const { sideBarToggle, setSideBarToggle } = useContext(toggleContext); // Get isCollapse from Context

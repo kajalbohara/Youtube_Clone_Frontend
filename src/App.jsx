@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Outlet } from "react-router-dom"; // ✅ Import Outlet
 import Sidebar from "./components/Sidebar";
- import Header from "./components/Header";
+import Header from "./components/Header";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import { ToastContainer } from "react-toastify";
@@ -15,17 +15,10 @@ function App() {
     <>
       <div className="app">
       <toggleContext.Provider value={{ sideBarToggle, setSideBarToggle }}>
-        <Header
-          // sideBarToggle={sideBarToggle}
-          // setSideBarToggle={setSideBarToggle}
-        />
+        <Header/>
         <div className="main-container">
           <Sidebar sideBarToggle={sideBarToggle} />
-          <div className="content"
-          style={{
-            marginLeft: sideBarToggle ? "6vw" : "15vw", // Adjust margin dynamically
-            width: sideBarToggle ? "calc(100vw - 8vw)" : "calc(100vw - 17vw)", // Adjust width accordingly
-        }}>
+          <div className={`content${sideBarToggle ? "collapse" : ""}`} >
             <Outlet /> 
           </div>
         </div>

@@ -1,3 +1,4 @@
+/* Container for the signup page */
 .signup-container {
   min-height: 100vh;
   display: flex;
@@ -5,6 +6,7 @@
   justify-content: center;
 }
 
+/* Styling for the signup form */
 .signup-form {
   background: white;
   padding: 20px;
@@ -16,17 +18,20 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Styling for the form title */
 .signup-form h2 {
-  font-size: 20px;   
+  font-size: 20px;
   margin-bottom: 15px;
   text-align: center;
 }
 
+/* Styling for form labels */
 .signup-form label {
   font-weight: 600;
   margin-top: 10px;
 }
 
+/* Styling for form inputs */
 .signup-form input {
   padding: 8px 2px;
   border: 1px solid #ccc;
@@ -34,6 +39,7 @@
   margin-top: 5px;
 }
 
+/* Styling for the signup button */
 .signup-btn {
   background-color: #1e293b;
   color: white;
@@ -44,19 +50,24 @@
   margin-top: 15px;
 }
 
+/* Hover effect for the signup button */
 .signup-btn:hover {
   background-color: black;
 }
 
+/* Styling for the login link */
 .login-link {
   font-weight: bold;
   color: #007bff;
   text-decoration: none;
 }
 
+/* Hover effect for the login link */
 .login-link:hover {
   text-decoration: underline;
 }
+
+/* Mobile Responsive Styles */
 @media (max-width: 600px) {
   .signup-container {
     padding: 10px;

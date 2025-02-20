@@ -29,7 +29,7 @@
   text-align: center;
 }
 
-/* 🔹 Responsive Design */
+/* Responsive Design for screens smaller than 768px */
 @media (max-width: 768px) {
   .search-videos__container {
     padding: 15px;
@@ -45,6 +45,7 @@
   }
 }
 
+/* Responsive Design for screens smaller than 480px */
 @media (max-width: 480px) {
   .search-videos__container {
     padding: 10px;

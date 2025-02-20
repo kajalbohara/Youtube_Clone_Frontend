@@ -1,3 +1,4 @@
+/* Main container for the video card */
 .video-main {
   width: 380px; /* Slightly reduce width to prevent merging */
   height: 290px;
@@ -7,11 +8,13 @@
   flex-shrink: 0; /* Prevents shrinking */
 }
 
+/* Toggle state for the video card */
 .video-maintoggle {
   width: 320px;
   height: 270px;
 }
 
+/* Styling for the video thumbnail */
 .vid-thumbnail {
   width: 100%;
   height: 12rem; /* Adjust height as per your design */
@@ -21,6 +24,7 @@
   border-radius: 6px;
 }
 
+/* Container for video information */
 .video-information {
   display: flex;
   align-items: center;
@@ -28,41 +32,47 @@
   padding-top: 0.5rem;
 }
 
+/* Styling for the channel logo */
 .logo {
-  width: 3rem; 
+  width: 3rem;
   height: 3rem;
   border-radius: 50%;
   border: 1px solid black;
   object-fit: cover;
-  background-size: contain;  /* Ensures the entire image is visible */
+  background-size: contain; /* Ensures the entire image is visible */
   background-position: center;
   background-repeat: no-repeat;
 }
 
+/* Container for video details */
 .Details {
   display: flex;
   flex-direction: column;
 }
 
+/* Styling for the video title */
 .vid-title {
   font-size: 14px;
   font-weight: bold;
   color: #222;
-  margin:0px;
+  margin: 0px;
 }
 
+/* Styling for the channel titles */
 .channel-titles {
   font-size: 18px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    color: black;
-    text-decoration: none;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: black;
+  text-decoration: none;
 }
 
+/* Hover effect for the channel title */
 .channel-title:hover {
   text-decoration: underline;
 }
 
+/* Styling for video information */
 .videos-info {
   font-size: 12px;
   color: gray;
@@ -70,7 +80,7 @@
   gap: 0.5rem;
 }
 
-/* Responsiveness  */
+/* Responsiveness for screens smaller than 600px */
 @media (max-width: 600px) {
   .video-main {
     width: 94vw; /* Slightly reduce width to prevent merging */
@@ -79,6 +89,7 @@
     display: flex;
     flex-direction: column;
   }
+
   .vid-thumbnail {
     width: 100%;
     height: 70%; /* Adjust height as per your design */
@@ -88,14 +99,14 @@
   }
 }
 
-@media (min-width:768px ) and (max-width:1024px) {
-  .video-main{
-    width:300px;
+/* Responsiveness for screens between 768px and 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .video-main {
+    width: 300px;
     height: 270px;
   }
-  .vid-thumbnail {
 
+  .vid-thumbnail {
+    /* Adjustments can be added here if needed */
   }
-  
-  
 }

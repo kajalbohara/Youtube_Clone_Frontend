@@ -1,5 +1,4 @@
-
-
+/* Sidebar container */
 .sidebar {
   position: fixed;
   top: 65px; /* Moves below the header */
@@ -8,72 +7,87 @@
   height: calc(100vh - 65px); /* Full height minus header */
   overflow-y: auto;
   z-index: 1000; /* Below header */
-  background: white;    
+  background: white;
   scrollbar-width: none;
 }
-  
-  
-  .collapsed {
-    width: 80px;
-  }
-  
-  .sidebar-item {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    font-size: 14px;
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .sidebar-item .icon {
-    font-size: 20px;
-    margin-right: 10px;
-  }
-  .sidebar.collapsed{
-    width: min-content;
-  }
-  
-  .collapsed .sidebar-item {
-    justify-content: center;
-  }
-  
-  .collapsed .sidebar-item .icon {
-    margin-right: 0;
-  }
-  
-  .hidden-items {
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  .hidden-items.hide {
-    display: none;
-  }
-  .divider {
-    border-top: 1px solid #ddd;
-    margin: 10px 0;
-  }
-  .sidebar-item:hover {
-    background: #f0f0f0;
-  }
 
-.mbl-menu{
+/* Collapsed sidebar */
+.collapsed {
+  width: 80px;
+}
+
+/* Styling for sidebar items */
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* Styling for icons in sidebar items */
+.sidebar-item .icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+/* Collapsed sidebar styling */
+.sidebar.collapsed {
+  width: min-content;
+}
+
+/* Adjust sidebar items in collapsed state */
+.collapsed .sidebar-item {
+  justify-content: center;
+}
+
+/* Adjust icons in collapsed state */
+.collapsed .sidebar-item .icon {
+  margin-right: 0;
+}
+
+/* Hidden items transition */
+.hidden-items {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Hide hidden items */
+.hidden-items.hide {
   display: none;
 }
 
-/* Responsiveness  */
+/* Divider between sections */
+.divider {
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+/* Hover effect for sidebar items */
+.sidebar-item:hover {
+  background: #f0f0f0;
+}
+
+/* Mobile menu */
+.mbl-menu {
+  display: none;
+}
+
+/* Responsiveness for screens smaller than 600px */
 @media (max-width: 600px) {
-  .sidebar{
+  .sidebar {
     display: none;
   }
+
   .main-container {
     overflow: hidden;
     align-items: center;
     justify-content: center;
     padding: 0px;
   }
+
   .mbl-menu {
     position: fixed;
     bottom: 0;
@@ -87,10 +101,12 @@
     border-top: 1px solid #ddd;
     z-index: 1000;
   }
+
   #plus {
     font-size: xx-large;
     color: black;
   }
+
   .mbl-view-icons {
     display: flex;
     position: relative;
@@ -101,9 +117,11 @@
     padding: 0px;
     font-size: x-large;
   }
-  .mbl-home-icon{
+
+  .mbl-home-icon {
     color: black;
   }
+
   .mbl-dropdown-menu {
     position: absolute;
     bottom: 60px; /* Adjust as per your design */
@@ -117,7 +135,7 @@
     display: flex;
     flex-direction: column;
   }
-  
+
   .mbl-dropdown-item {
     display: block;
     padding: 12px 16px;
@@ -126,19 +144,19 @@
     text-decoration: none;
     cursor: pointer;
   }
-  
+
   .mbl-dropdown-item:hover {
     background-color: #f1f1f1;
   }
-  
+
   .logout {
     color: red;
   }
-  
+
   .mbl-view-icons {
     position: relative; /* Ensure dropdown positions relative to this */
   }
-  
+
   #avatar, .user-icon {
     width: 36px;
     height: 36px;
@@ -147,21 +165,25 @@
     z-index: 5100;
   }
 }
+
+/* Responsiveness for screens smaller than 786px */
 @media (max-width: 786px) {
   .sidebar {
     width: 140px; /* Adjust for tablet */
     height: calc(118vh - 65px); /* Full height minus navbar */
     overflow-y: auto; /* Allow scrolling if needed */
   }
- 
 }
+
+/* Responsiveness for screens smaller than 1024px */
 @media (max-width: 1024px) {
   .sidebar {
     width: 200px; /* Adjust for tablet */
     height: calc(118vh - 65px); /* Full height minus navbar */
     overflow-y: auto; /* Allow scrolling if needed */
   }
-  .sidebar.collapsed{
+
+  .sidebar.collapsed {
     width: 60px;
   }
 }

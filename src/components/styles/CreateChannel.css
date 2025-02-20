@@ -1,52 +1,59 @@
+/* Container for the create channel form */
 .create-channel-container {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px 0;
-  }
-  
-  .create-channel-form {
+}
+
+/* Styling for the create channel form */
+.create-channel-form {
     width: 90%;
     max-width: 500px;
     background: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .form-title {
+}
+
+/* Styling for the form title */
+.form-title {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  .channel-logo {
+}
+
+/* Styling for the channel logo */
+.channel-logo {
     display: block;
     width: 100px;
     height: 100px;
     border-radius: 50%;
     margin: 0 auto 20px;
     border: 2px solid black;
-  }
-  
-  label {
+}
+
+/* Styling for form labels */
+label {
     font-weight: bold;
     margin-bottom: 5px;
     display: block;
-  }
-  
-  input {
+}
+
+/* Styling for form inputs */
+input {
     width: 100%;
     padding: 8px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
-  }
-  
-  .submit-btn {
+}
+
+/* Styling for the submit button */
+.submit-btn {
     width: 100%;
     background-color: #333;
     color: white;
@@ -55,58 +62,72 @@
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-  }
-  
-  .submit-btn:hover {
+}
+
+/* Hover effect for the submit button */
+.submit-btn:hover {
     background-color: black;
-  }
-  @media screen and (max-width: 768px) {
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Adjust width for smaller screens */
     .create-channel-form {
-      width: 95%; /* Adjust width for smaller screens */
-      padding: 15px;
+        width: 95%;
+        padding: 15px;
     }
-  
+
+    /* Adjust font size for form title on smaller screens */
     .form-title {
-      font-size: 18px;
+        font-size: 18px;
     }
-  
+
+    /* Adjust padding and font size for inputs on smaller screens */
     input {
-      padding: 8px;
-      font-size: 14px;
+        padding: 8px;
+        font-size: 14px;
     }
-  
+
+    /* Adjust font size and padding for submit button on smaller screens */
     .submit-btn {
-      font-size: 14px;
-      padding: 10px;
+        font-size: 14px;
+        padding: 10px;
     }
-  }
-  
-  @media screen and (max-width: 480px) {
+}
+
+/* Extra Small Devices */
+@media screen and (max-width: 480px) {
+    /* Adjust padding for container on extra small devices */
     .create-channel-container {
-      padding: 15px;
+        padding: 15px;
     }
-  
+
+    /* Full width form on extra small devices */
     .create-channel-form {
-      width: 100%; /* Full width */
-      padding: 10px;
+        width: 100%;
+        padding: 10px;
     }
-  
+
+    /* Adjust font size for form title on extra small devices */
     .form-title {
-      font-size: 16px;
+        font-size: 16px;
     }
-  
+
+    /* Adjust size for channel logo on extra small devices */
     .channel-logo {
-      width: 80px; /* Smaller logo */
-      height: 80px;
+        width: 80px;
+        height: 80px;
     }
-  
+
+    /* Adjust padding and font size for inputs on extra small devices */
     input {
-      font-size: 12px;
-      padding: 8px;
+        font-size: 12px;
+        padding: 8px;
     }
-  
+
+    /* Adjust font size and padding for submit button on extra small devices */
     .submit-btn {
-      font-size: 14px;
-      padding: 10px;
+        font-size: 14px;
+        padding: 10px;
     }
-  }
+}

@@ -1,3 +1,4 @@
+/* Container for the entire comment */
 .comment-container {
   display: flex;
   justify-content: space-between;
@@ -7,17 +8,21 @@
   margin-bottom: 10px;
 }
 
+/* Container for the comment content */
 .comment-content {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.comment-mbl{
+/* Mobile-specific container for comment content */
+.comment-mbl {
   display: flex;
   flex-direction: row;
-  gap:10px;
+  gap: 10px;
 }
+
+/* Styling for the comment avatar */
 .comment-avatar {
   width: 48px;
   height: 48px;
@@ -25,6 +30,7 @@
   border: 1px solid black;
 }
 
+/* Container for the comment data */
 .comment-data {
   font-size: 14px;
   display: flex;
@@ -32,10 +38,12 @@
   gap: 5px;
 }
 
+/* Styling for the comment timestamp */
 .comment-time {
   color: #4b5563;
 }
 
+/* Styling for the comment input field */
 .comment-input {
   outline: none;
   border: 1px solid #d1d5db;
@@ -43,12 +51,14 @@
   width: 35rem;
 }
 
+/* Container for comment actions */
 .comment-actions {
   display: flex;
   gap: 10px;
   align-items: center;
 }
 
+/* Styling for buttons within comment actions */
 .comment-actions button {
   background: none;
   border: none;
@@ -56,15 +66,18 @@
   font-size: 16px;
 }
 
+/* Container for comment options */
 .comment-options {
   position: relative;
 }
 
+/* Styling for the options icon */
 .options-icon {
   cursor: pointer;
   font-size: 18px;
 }
 
+/* Styling for the options menu */
 .options-menu {
   display: none;
   position: absolute;
@@ -75,10 +88,12 @@
   top: 0;
 }
 
+/* Show the options menu */
 .options-menu.show {
   display: block;
 }
 
+/* Styling for individual option items */
 .option-item {
   padding: 8px;
   display: flex;
@@ -87,68 +102,79 @@
   cursor: pointer;
 }
 
+/* Hover effect for option items */
 .option-item:hover {
   background-color: #e5e7eb;
 }
+
+/* Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
+  /* Stack content on smaller screens */
   .comment-container {
-    flex-direction: column; /* Stack content on smaller screens */
+    flex-direction: column;
     align-items: flex-start;
   }
 
+  /* Stack avatar and text */
   .comment-content {
-    flex-direction: column; /* Stack avatar and text */
+    flex-direction: column;
     gap: 5px;
   }
 
+  /* Adjust size for comment avatar on mobile */
   .comment-avatar {
     width: 36px;
     height: 36px;
   }
 
+  /* Full width input on mobile */
   .comment-input {
-    width: 100%; /* Full width input */
+    width: 100%;
   }
 
+  /* Adjust layout for comment actions on mobile */
   .comment-actions {
     justify-content: space-between;
     width: 100%;
-  }      
+  }
 }
 
+/* Extra Small Devices */
 @media screen and (max-width: 480px) {
+  /* Adjust size for comment avatar on extra small devices */
   .comment-avatar {
     width: 32px;
     height: 32px;
   }
-  
+
+  /* Adjust font size and layout for comment data on extra small devices */
   .comment-data {
     font-size: 6px;
-   flex-direction: row;     
-   justify-content: space-between; 
-   width: 100px;
-  
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100px;
   }
 
+  /* Adjust layout for comment actions on extra small devices */
   .comment-actions {
     flex-direction: row;
-  
   }
 
+  /* Adjust font size for buttons within comment actions on extra small devices */
   .comment-actions button {
     font-size: 14px;
   }
-  .comment-mbl{
+
+  /* Mobile-specific container for comment content on extra small devices */
+  .comment-mbl {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap:8px;
+    gap: 8px;
+  }
 
+  /* Adjust width for comment description on extra small devices */
+  #comment-desc {
+    width: 100px;
   }
-  #comment-desc{
-    width:100px;
-    
-  }
- 
-  
 }

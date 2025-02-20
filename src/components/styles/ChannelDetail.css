@@ -1,7 +1,9 @@
+/* Main container for the channel details */
 .main-channel-container {
   padding: 20px;
 }
 
+/* Styling for the banner image */
 .banner-image {
   width: 100%;
   height: 200px;
@@ -9,6 +11,7 @@
   object-fit: fill;
 }
 
+/* Container for channel information */
 .channel-info-container {
   display: flex;
   flex-direction: row;
@@ -16,22 +19,26 @@
   padding: 20px 0;
 }
 
+/* Styling for the channel icon image */
 .channel-icon-image {
   border-radius: 50%;
   width: 100px;
   height: 100px;
 }
 
+/* Styling for the channel title text */
 .channel-title-text {
   font-size: 24px;
   font-weight: bold;
 }
 
+/* Container for action buttons */
 .actions-container {
   text-align: center;
   margin-top: 20px;
 }
 
+/* Header container for actions */
 .actions-header-container {
   background-color: #f0f0f0;
   padding: 10px;
@@ -39,6 +46,7 @@
   display: inline-block;
 }
 
+/* Styling for individual action buttons */
 .action-button {
   text-decoration: none;
   background-color: #444;
@@ -49,10 +57,12 @@
   transition: 0.3s;
 }
 
+/* Hover effect for action buttons */
 .action-button:hover {
   background-color: black;
 }
 
+/* Container for video boxes */
 .video-box-container {
   display: flex;
   flex-wrap: wrap;
@@ -62,14 +72,17 @@
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
+  /* Adjust padding for main container on mobile */
   .main-channel-container {
     padding: 10px -3px;
   }
 
+  /* Adjust height for banner image on mobile */
   .banner-image {
     height: 150px;
   }
 
+  /* Adjust layout for channel info container on mobile */
   .channel-info-container {
     flex-direction: column;
     align-items: center;
@@ -77,19 +90,23 @@
     gap: 10px;
   }
 
+  /* Adjust size for channel icon image on mobile */
   .channel-icon-image {
     width: 100px;
     height: 100px;
   }
 
+  /* Adjust font size for channel title text on mobile */
   .channel-title-text {
     font-size: 18px;
   }
 
+  /* Adjust margin for actions container on mobile */
   .actions-container {
     margin-top: 15px;
   }
 
+  /* Adjust gap for video box container on mobile */
   .video-box-container {
     gap: 10px;
   }
@@ -98,28 +115,34 @@
 
 /* Extra Small Devices */
 @media (max-width: 480px) {
+  /* Adjust height for banner image on extra small devices */
   .banner-image {
     height: 120px;
   }
 
+  /* Adjust size for channel icon image on extra small devices */
   .channel-icon-image {
     width: 80px;
     height: 80px;
   }
 
+  /* Adjust font size for channel title text on extra small devices */
   .channel-title-text {
     font-size: 16px;
   }
 
+  /* Adjust margin for actions container on extra small devices */
   .actions-container {
     margin-top: 10px;
   }
 
+  /* Adjust padding and font size for action buttons on extra small devices */
   .action-button {
     padding: 6px 12px;
     font-size: 14px;
   }
 
+  /* Adjust layout for video box container on extra small devices */
   .video-box-container {
     flex-direction: column;
     gap: 10px;

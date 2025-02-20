@@ -1,114 +1,124 @@
+/* Container for the upload video form page */
 .upload-video-container {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+/* Styling for the upload form */
+.upload-form {
+  width: 90%;
+  max-width: 500px;
+  background: white;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling for the form title */
+.form-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Styling for the video thumbnail */
+.video-thumbnail {
+  width: 80px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 50%;
+}
+
+/* Styling for form labels */
+label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Styling for form inputs, textareas, and selects */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 8px 2px;
+  margin-top: 5px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+}
+
+/* Prevent resizing of textareas */
+textarea {
+  resize: none;
+}
+
+/* Styling for the upload button */
+.upload-button {
+  background: #1e293b;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+/* Hover effect for the upload button */
+.upload-button:hover {
+  background: #000;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 600px) {
+  .upload-video-container {
+    padding: 20px 10px;
   }
-  
+
   .upload-form {
-    width: 90%;
-    max-width: 500px;
-    background: white;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    padding: 15px;
   }
-  
+
   .form-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: center;
+    font-size: 18px;
   }
-  
+
   .video-thumbnail {
-    width: 80px;
-    margin: 10px auto;
-    display: block;
-    border-radius: 50%;
+    width: 60px;
   }
-  
-  label {
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  
+
   input,
   textarea,
   select {
-    width: 100%;
+    font-size: 14px;
     padding: 8px 2px;
-    margin-top: 5px;
-    border: 1px solid #cbd5e1;
-    border-radius: 4px;
   }
-  
-  textarea {
-    resize: none;
-  }
-  
-  .upload-button {
-    background: #1e293b;
-    color: white;
-    border: none;
-    padding: 10px;
-    margin-top: 15px;
+
+  select {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: #fff;
     cursor: pointer;
-    border-radius: 4px;
-    transition: background 0.3s;
   }
-  
-  .upload-button:hover {
-    background: #000;
+
+  select option {
+    font-size: 14px;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
-  @media (max-width: 600px) {
-    .upload-video-container {
-      padding: 20px 10px;
-    }
-  
-    .upload-form {
-      width: 100%;
-      padding: 15px;
-    }
- 
-    .form-title {
-      font-size: 18px;
-    }
-  
-    .video-thumbnail {
-      width: 60px;
-    }
-  
-    input,
-    textarea,
-    select {
-      font-size: 14px;
-      padding: 8px 2px;
-    }
-  
-    select {
-      width: 100%;
-      max-width: 100%;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      background-color: #fff;
-      cursor: pointer;
-    }
-  
-    select option {
-      font-size: 14px;
-      white-space: normal;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-    }
-  
-    .upload-button {
-      font-size: 14px;
-      padding: 10px;
-    }
+
+  .upload-button {
+    font-size: 14px;
+    padding: 10px;
   }
-  
+}

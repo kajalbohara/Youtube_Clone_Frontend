@@ -1,7 +1,39 @@
 
 .main-container{
   display: flex;
-  padding: 13px; /* Pushes content below header */
+  padding: 10px 4px ; /* Pushes content below header */
 /* Avoids sidebar overlap */
 }
 
+.content {
+  width: calc(100vw - 16vw) ;
+  margin-left: 16vw;
+}
+
+.contentcollapse {
+  width: calc(100vw - 4vw) ;
+  margin-left: 4vw;
+}
+
+/* Responsiveness  */
+@media (max-width: 600px) {
+  .content {
+      width: 100vw ;
+      margin-left: 0vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contentcollapse{
+      width: calc(100vw - 8vw);
+      margin-left: 8vw;
+  }
+  .content{
+      width: calc(100vw - 30vw);
+      margin-left: 20vw;
+  }
+  
+}
