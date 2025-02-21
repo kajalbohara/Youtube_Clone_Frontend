@@ -1,28 +1,28 @@
 # 🎬 YouTube Clone - MERN Stack 🚀
 
 ## 🌟 Overview
-Welcome to the **YouTube Clone**, your own personal video streaming universe! 🌍✨ Built with the **MERN stack**, this app lets you **upload**, **watch**, and **engage** with videos just like a pro YouTuber! 🎥🍿 So grab some popcorn and dive in! 🍿🔥
+Welcome to the **YouTube Clone**, your own personal video streaming universe! 🌍✨ Built with the **MERN stack**, this app lets you **upload**, **watch**, and **engage** with videos just like a pro YouTuber! 🎥🔥
 
 ## 🔥 Features
 
 ### 🎨 Frontend (React)
 - **🏠 Home Page**
-  - A sleek YouTube-style header and sidebar 🎭
-  - Trending video grid that keeps you hooked 🎞️
-  - Category-based filters to find your favorite content 🔍
+  - A sleek YouTube-style header and sidebar 
+  - Trending video grid that keeps you hooked 
+  - Category-based filters to find your favorite content 
   
 - **🔐 User Authentication**
-  - Secure sign-up and login system 🛡️
-  - JWT-based authentication to keep things safe 🔏
-  - Google form integration for a smooth sign-in experience 📲
+  - Secure sign-up and login system 
+  - JWT-based authentication to keep things safe 
+  - Google form integration for a smooth sign-in experience 
   
 - **🎯 Search and Filter**
   - Lightning-fast search to find videos instantly ⚡
   - Filter by category to watch what you love 💕
   
 - **🎬 Video Player Page**
-  - High-quality video streaming experience 🎞️
-  - See video details, uploader info, and descriptions ℹ️
+  - High-quality video streaming experience 
+  - See video details, uploader info, and descriptions 
   - Like 👍/Dislike 👎 and drop comments 💬
   
 - **📺 Channel Page**
@@ -37,7 +37,7 @@ Welcome to the **YouTube Clone**, your own personal video streaming universe! �
 - **📡 API Endpoints**
   - User authentication (Sign up, login, JWT-based auth) 🔐
   - Channel management (Create, update, fetch channels) 🛠️
-  - Video management (Upload, fetch, update, delete videos) 📹
+  - Video management (Upload, fetch, update, delete videos) 
   - Comment management (Add, fetch comments) 💬
 
 - **🗄️ Database (MongoDB)**
@@ -48,7 +48,7 @@ Welcome to the **YouTube Clone**, your own personal video streaming universe! �
 - **Frontend:** React, React Router, Axios ⚛️
 - **Backend:** Node.js, Express.js 🖥️
 - **Authentication:** JWT (JSON Web Tokens) 🔑
-- **Database:** MongoDB (Atlas/local instance) 🌍
+- **Database:** MongoDB (Atlas) 🌍
 - **Version Control:** Git 🛠️
 
 ## 🛠️ Installation & Setup
@@ -81,7 +81,7 @@ Create a `.env` file in the backend directory and add:
 ```sh
 MONGO_URI=your_mongodb_uri
 JWT_SECRET=your_secret_key
-PORT=5000
+
 ```
 
 ### ▶️ Run the Application
@@ -103,8 +103,6 @@ $ npm start
 4. **Like, dislike, and comment** to engage with the community 👍👎💬
 5. **Manage your videos** through the intuitive channel page 🏗️
 
-## 🤝 Contribution
-Want to add cool new features? Fork the repo, make changes, and submit a PR! Let's build something amazing together! 🚀✨
 
 ## 📜 License
-This project is open-source and available under the MIT License. ⚖️ Feel free to use and modify it as you wish! 🎉
+This project is open-source and available under the MIT License. ⚖️
