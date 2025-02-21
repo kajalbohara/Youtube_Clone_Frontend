@@ -60,6 +60,12 @@ OR
 npm run dev
 ```
 
+## 📌 Connecting Frontend to Backend
+Make sure the API URL in the **frontend `.env` file** matches your backend server (`http://localhost:7000`). Restart the frontend if necessary:
+```bash
+ npm start
+```
+
 ## Usage
 1. Register or log in to access full features.
 2. Browse and search for videos.
