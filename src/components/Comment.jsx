@@ -21,7 +21,7 @@ const Comment = ({ triggerCommentFetch, createdAt, owner, description, id, video
     const fetchOwner = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:7000/api/users/${owner}`
+          `https://youtube-clone-backend-jf4n.onrender.com/api/users/${owner}`
         );
         if (data) {
           setCommentOwner(data.user); // Set comment owner data
@@ -37,7 +37,7 @@ const Comment = ({ triggerCommentFetch, createdAt, owner, description, id, video
   const handleDelete = async () => {
     try {
       const result = await axios.delete(
-        `http://localhost:7000/api/comment/deleteComment/${id}/${video}/${user?._id}`
+        `https://youtube-clone-backend-jf4n.onrender.com/api/comment/deleteComment/${id}/${video}/${user?._id}`
       );
       if (result) {
         toast.success("Comment deleted successfully"); // Show success message
@@ -54,7 +54,7 @@ const Comment = ({ triggerCommentFetch, createdAt, owner, description, id, video
   const handleUpdate = async () => {
     try {
       const result = await axios.put(
-        `http://localhost:7000/api/comment/updateComment/${id}/${video}/${user?._id}`,
+        `https://youtube-clone-backend-jf4n.onrender.com/api/comment/updateComment/${id}/${video}/${user?._id}`,
         { description: editedDescription }
       );
       if (result) {

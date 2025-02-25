@@ -29,7 +29,7 @@ const VideoView = () => {
     try {
       const uId = user._id;
       const { data } = await axios.put(
-        `http://localhost:7000/api/video/likeVideo/${video}`,
+        `https://youtube-clone-backend-jf4n.onrender.com/api/video/likeVideo/${video}`,
         { uId },
         {
           headers: { Authorization: `JWT ${token}` },
@@ -57,7 +57,7 @@ const VideoView = () => {
     try {
       const uId = user._id;
       const { data } = await axios.put(
-        `http://localhost:7000/api/video/disLikeVideo/${video}`,
+        `https://youtube-clone-backend-jf4n.onrender.com/api/video/disLikeVideo/${video}`,
         { uId },
         {
           headers: { Authorization: `JWT ${token}` },
@@ -81,7 +81,7 @@ const VideoView = () => {
     // Fetch video details
     const fetchData = async () => {
       const { data } = await axios.get(
-        `http://localhost:7000/api/video/${video}`
+        `https://youtube-clone-backend-jf4n.onrender.com/api/video/${video}`
       );
       if (data) {
         setVideoData(data.video);
@@ -107,7 +107,7 @@ const VideoView = () => {
   const fetchChannelVideos = async (id) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:7000/api/video/channelVideos/${id}`
+        `https://youtube-clone-backend-jf4n.onrender.com/api/video/channelVideos/${id}`
       );
       if (data) {
         setChannelVideos(data.videos);
@@ -120,7 +120,7 @@ const VideoView = () => {
   // Fetch channel data
   const fetchChannelData = async (cId) => {
     const { data } = await axios.get(
-      `http://localhost:7000/api/channel/${cId}`
+      `https://youtube-clone-backend-jf4n.onrender.com/api/channel/${cId}`
     );
     if (data) {
       setChannelData(data.channel);
@@ -130,7 +130,7 @@ const VideoView = () => {
   // Fetch video comments
   const fetchVideoComments = async () => {
     const { data } = await axios.get(
-      `http://localhost:7000/api/comment/videoComments/${video}`
+      `https://youtube-clone-backend-jf4n.onrender.com/api/comment/videoComments/${video}`
     );
     if (data) {
       setComments(data.comments);
@@ -157,7 +157,7 @@ const VideoView = () => {
     };
     try {
       const response = await axios.post(
-        "http://localhost:7000/api/comment/addComment",
+        "https://youtube-clone-backend-jf4n.onrender.com/api/comment/addComment",
         commentData
       );
       if (response.data) {
@@ -178,7 +178,7 @@ const VideoView = () => {
     }
     try {
       const { data } = await axios.put(
-        `http://localhost:7000/api/channel/subscribeChannel/${channelData._id}/${user._id}`,
+        `https://youtube-clone-backend-jf4n.onrender.com/api/channel/subscribeChannel/${channelData._id}/${user._id}`,
         {},
         { headers: { Authorization: `JWT ${token}` } }
       );

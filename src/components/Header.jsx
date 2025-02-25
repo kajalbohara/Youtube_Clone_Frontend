@@ -31,7 +31,7 @@ export default function Header() {
       const fetchUserChannel = async () => {
         try {
           let { data } = await axios.get(
-            `http://localhost:7000/api/channel/${user?.channel[0]}`
+            `https://youtube-clone-backend-jf4n.onrender.com/api/channel/${user?.channel[0]}`
           );
           dispatch(setUserChannelDetails(data.channel)); // Set user channel details in Redux store
         } catch (error) {

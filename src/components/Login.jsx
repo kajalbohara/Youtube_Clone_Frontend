@@ -34,7 +34,7 @@ const Login = () => {
   
     try {
       const { email, password } = formData;
-      let { data } = await axios.post("http://localhost:7000/api/users/login", { email: formData.email.toLowerCase(), 
+      let { data } = await axios.post("https://youtube-clone-backend-jf4n.onrender.com/api/users/login", { email: formData.email.toLowerCase(), 
         password: formData.password });
   
       if (data) {

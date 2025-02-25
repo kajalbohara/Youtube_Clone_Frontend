@@ -33,9 +33,7 @@ const Home = () => {
     const fetchData = async () => {
       setLoading(true); // Set loading state to true
       try {
-        const { data } = await axios.get(
-          "http://localhost:7000/api/video/"
-        );
+        const { data } = await axios.get(`https://youtube-clone-backend-jf4n.onrender.com/api/video/`);
         if (data) {
           setVideos(data.videos); // Set videos data
           setFilteredData(data.videos); // Set filtered data

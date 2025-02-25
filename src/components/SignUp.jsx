@@ -33,7 +33,7 @@ const SignUp = () => {
   
     try {
       const { userName, email, password, avatar } = formData;
-      let { data } = await axios.post("http://localhost:7000/api/users/signup", {
+      let { data } = await axios.post("https://youtube-clone-backend-jf4n.onrender.com/api/users/signup", {
         userName, email, password, avatar
       });
   
