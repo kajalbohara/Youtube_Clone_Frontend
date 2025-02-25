@@ -76,14 +76,14 @@ export default function Header() {
         {/* Logo links */}
         <Link to={"/"}>
           <img
-            src="public\YouTube_Logo.svg"
+            src="YouTube_Logo.svg"
             alt="YouTube"
             className="logo-small"
           />
         </Link>
         <Link to={"/"}>
           <img
-            src="public\YouTube_Logo.svg"
+            src="YouTube_Logo.svg"
             alt="YouTube"
             className="logo-large"
           />
