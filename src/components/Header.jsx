@@ -73,24 +73,23 @@ export default function Header() {
           size={24}
           onClick={() => setSideBarToggle(!sideBarToggle)}
         />
-        {/* Logo links */}
-        <Link to={"/"}>
-          <img
-            src="dist\assets\YouTube_Logo.svg"
-            alt="YouTube"
-            className="logo-small"
-          />
-        </Link>
+       
+       
+       <Link to="/">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
+          alt="YouTube"
+          className="logo-small"
+        />
+      </Link>
 
-
-        
-        <Link to={"/"}>
-          <img
-            src="dist\assets\YouTube_Logo.svg"
-            alt="YouTube"
-            className="logo-large"
-          />
-        </Link>
+      <Link to="/">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
+          alt="YouTube"
+          className="logo-large"
+        />
+      </Link>
       </div>
 
       <div className="search-field">
